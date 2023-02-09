@@ -1,0 +1,11 @@
+#include<stdio.h>
+#define size 3
+int main()
+{
+    int some_data[size]={1966,1977};
+    int a;
+    printf("%2s%14s\n","a","some_data[a]");
+    for(a=0;a<size;a++)
+        printf("%2d%14d\n",a,some_data[a]);
+    return 2;
+}
