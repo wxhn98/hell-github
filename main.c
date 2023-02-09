@@ -1,32 +1,12 @@
 #include<stdio.h>
-#include<stdbool.h>
-int main(void)
-{
-    unsigned long num;
-    unsigned long div;
-    bool isPrime;
+#define MONTHS 12
+int main()
 
-    printf("Please enter an integer for analysis;");
-    printf("Enter q to quit.\n");
-    while(scanf("%1u",&num)==1)
-    {
-        for(div=2,isPrime=true;(div*div)<=num;div++)
-        {
-            if(num%div==0)
-            {
-                if((div*div) !=num)
-                    printf("%1u is divisible by %1u and %1u.\n",
-                           num,div,num/div);
-                else
-                    printf("%1u is divisible by %1u .\n",num,div);
-                isPrime=false;
-            }
-        }
-        if(isPrime)
-            printf("%1u is prime.\n",num);
-        printf("Please enter another integer for analysis;");
-        printf("Enter q to quit.\n");
-    }
-    printf("Bye.\n");
+{
+    int days[MONTHS]={31,28,31,30,31,30,31,31,30,31,30,31};
+    int w;
+    for(w=0;w<MONTHS;w++)
+        printf("Month %2d has %2d days.\n",w+1,days[w]);
+
     return 0;
 }
