@@ -1,12 +1,22 @@
 #include<stdio.h>
-#define MONTHS 12
-int main()
+#define width 30
+int starbar();
+int main(void)
 
 {
-    int days[MONTHS]={31,28,31,30,31,30,31,31,30,31,30,31};
-    int w;
-    for(w=0;w<MONTHS;w++)
-        printf("Month %2d has %2d days.\n",w+1,days[w]);
-
+    starbar();
+    printf("            ");
+    printf("hhhh\n");
+    starbar();
     return 0;
 }
+
+int starbar()
+{
+    int count;
+    for(count=1;count<=width;count++)
+        putchar('*');
+    putchar('\n');
+    return 0;
+}
+
