@@ -1,11 +1,18 @@
 #include<stdio.h>
-int main()
+#define space ' '
+int main(void)
 {
-    int ten=10;
-    int two=2;
-    printf("Doing is right:");
-    printf("%d minus %d is %d \n",ten,2,ten-two);
-    printf("Doing it wrong:");
-    printf("%d minus %d is %d\n",ten,2,ten+two);
+    char ch;
+
+    ch = getchar();
+    while (ch != '\n')
+    {
+      if(ch == space)
+          putchar(ch);
+      else
+          putchar(ch+1);
+      ch = getchar();
+    }
+    putchar(ch);
     return 0;
 }
