@@ -27,15 +27,16 @@ int main(void)
     scanf("%d", &n);
     int arr[n];
     printf("请输入数组元素：\n");
-   
+    
     for (int i = 0; i < n; i++)
     {
+        printf("输入的第%d个元素是",i + 1);
         scanf("%d", &arr[i]);
     }
 
     exchange(arr,n);
 
-    printf("输出数组元素：\n");
+    printf("排序后的结果是：\n");
     for (int i = 0; i < n; i++)
     {
         printf("%d ", arr[i]);
